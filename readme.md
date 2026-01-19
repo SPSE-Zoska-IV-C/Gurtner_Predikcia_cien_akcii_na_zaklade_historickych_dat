@@ -1,4 +1,4 @@
-<img width="1460" height="570" alt="image" src="https://github.com/user-attachments/assets/5b045468-0218-4a31-87df-39da2393d508" /># Nazov projektu: Stock market prediction
+# Nazov projektu: Stock market prediction
 - Veduci prace: Oliver Halas
 
 # 📈 Stock Price Prediction with LSTM & Transformer (PyTorch)
@@ -124,6 +124,8 @@ Spustenie TensorBoard:
 ```bash
 tensorboard --logdir runs
 ```
+
+<img width="1460" height="570" alt="image" src="https://github.com/user-attachments/assets/5b045468-0218-4a31-87df-39da2393d508" />
 
 Uvidíš:
 
