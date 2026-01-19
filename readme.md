@@ -157,17 +157,3 @@ To umožňuje neskoršie:
 * Pridanie ďalších vstupných feature (Open, High, Volume)
 * Porovnanie viacerých Transformer konfigurácií
 * Vizualizácia predikcií vs. realita
-
----
-
-## ✍️ Autor
-
-Projekt vytvorený ako experiment s časovými radmi a modernými neurónovými sieťami v PyTorchi.
-
----
-
-Ak chceš, viem ti:
-
-* README ešte **viac zjednodušiť** (napr. pre odovzdanie do školy),
-* alebo spraviť **anglickú verziu**,
-* prípadne ho upraviť presne podľa **GitHub štýlu**, ak mi povieš účel projektu.
