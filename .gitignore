@@ -1,0 +1,10 @@
+#ignore api file
+dbs/api/
+add_api.py
+__pycache__/
+logs_jax
+runs/
+.github/
+.vscode/
+.venv/
+stock_prediction/
