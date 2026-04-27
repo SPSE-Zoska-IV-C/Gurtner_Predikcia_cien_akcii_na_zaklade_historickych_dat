@@ -2,11 +2,7 @@
 
 Maturitny projekt zamerany na predikciu cien akcii pomocou modelov strojoveho ucenia.
 
-## 1. Nazov projektu
-
-Stock Price Prediction Dashboard
-
-## 2. Opis projektu
+## Opis projektu
 
 Projekt predstavuje webovu aplikaciu vytvorenu v prostredi Python, ktora umoznuje trenovanie modelov pre casove rady nad historickymi datami akcii.
 
@@ -38,7 +34,7 @@ Hlavna aplikacna vrstva je v subore `app.py`, treningovy proces je implementovan
 - SQLite
 - TensorFlow
 
-## 3. Struktura projektu
+## Struktura projektu
 
 - `app.py` - webove rozhranie, konfiguracia treningu, zobrazenie metrik a grafov
 - `training_4_0.py` - hlavny treningovy pipeline
@@ -49,14 +45,14 @@ Hlavna aplikacna vrstva je v subore `app.py`, treningovy proces je implementovan
 - `runs/` - TensorBoard logy pre trening a predikciu
 - `assets/style.css` - stylovanie Dash aplikacie
 
-## 4. Instalacia a spustenie
+## Instalacia a spustenie
 
-### 4.1 Poziadavky
+### Poziadavky
 
 - Python 3.11 alebo novsi
 - pip
 
-### 4.2 Klon repozitara a vytvorenie virtualneho prostredia
+### Klon repozitara a vytvorenie virtualneho prostredia
 
 ```bash
 git clone https://github.com/dragox134/stocks_data_prediction.git
@@ -77,13 +73,13 @@ Linux/macOS:
 source stock_prediction/bin/activate
 ```
 
-### 4.3 Instalacia zavislosti
+### Instalacia zavislosti
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4.4 Spustenie aplikacie
+### Spustenie aplikacie
 
 ```bash
 python app.py
@@ -92,7 +88,7 @@ python app.py
 Po spusteni je aplikacia dostupna na adrese:
 - `http://127.0.0.1:8050`
 
-### 4.5 Volitelne: aktualizacia lokalnych databaz
+### Volitelne: aktualizacia lokalnych databaz
 
 Pre pracu s lokalnymi SQLite databazami su pripravene skripty:
 - `database_scripts/start.py`
@@ -109,7 +105,7 @@ python database_scripts/start.py
 
 Poznamka: Trening modelov v aktualnej verzii nacitava historicke data primarne cez kniznicu `yfinance`.
 
-## 5. Zakladny postup pouzitia
+## Zakladny postup pouzitia
 
 1. V aplikacii vyber ticker, model a treningove parametre.
 2. Spusti trening tlacidlom `Train Model`.
@@ -119,14 +115,14 @@ Poznamka: Trening modelov v aktualnej verzii nacitava historicke data primarne c
 - `Train/Close`
 - `Test/Close` (vratane buducej predikcie)
 
-## 6. Credits
+## Credits
 
 - Autor projektu: Leo Gürtner
 - Typ projektu: skolsky maturitny projekt
 - Pouzite kniznice a frameworky: PyTorch, Dash, Plotly, scikit-learn, yfinance, SQLAlchemy, TensorBoard
 - Data zdroje: Yahoo Finance (cez `yfinance`), Alpha Vantage (pre databazove skripty)
 
-## 7. Prispievanie
+## Prispievanie
 
 Projekt je primarne urceny ako skolsky projekt. Pripadne navrhy na zlepsenie su vitane.
 
@@ -135,7 +131,7 @@ Odporucany postup:
 2. Vytvorenie vlastneho branchu
 3. Vytvorenie Pull Requestu s popisom zmien
 
-## 8. Licencia
+## Licencia
 
 Tento projekt je licencovany pod MIT licenciou.
 Podrobnosti su uvedene v subore `LICENSE`.
