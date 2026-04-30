@@ -1,24 +1,23 @@
 # Stock Price Prediction Dashboard
 
-Maturitny projekt zamerany na predikciu cien akcii pomocou modelov strojoveho ucenia.
+Maturitný projekt zameraný na predikciu cien akcií pomocou modelov strojového učenia.
 
 ## Opis projektu
 
-Projekt predstavuje webovu aplikaciu vytvorenu v prostredi Python, ktora umoznuje trenovanie modelov pre casove rady nad historickymi datami akcii.
+Projekt predstavuje webovú aplikáciu vytvorenú v prostredí Python, ktorá umožňuje
+trénovanie modelov pre časové rady pomocou historických dát akcií.
 
-Hlavne ciele projektu:
-- navrhnut a implementovat pipeline pre nacitanie, pripravu a trenovanie dat,
-- porovnat realne a predikovane hodnoty ceny akcie,
-- vizualizovat priebeh trenovania a kvalitu modelu,
-- realizovat kratkodobu predikciu buducich hodnot.
+Hlavné ciele projektu:
+- navrhnúť a implementovať pipeline pre načítanie, prípravu a trénovanie dát,
+- porovnať reálne a predikované hodnoty ceny akcie,
+- vizualizovať priebeh trénovania a kvalitu modelu,
+- realizovať krátkodobú predikciu budúcich hodnôt.
 
-Aktualne implementovane modely:
+Aktuálne implementované modely:
 - LSTM
-- Transformer (volba `trs`)
+- Transformer (voľba `trs`)
 
-Hlavna aplikacna vrstva je v subore `app.py`, treningovy proces je implementovany v `training_4_0.py`.
-
-### Pouzite technologie
+### Použité technológie
 
 - Python 3.11
 - PyTorch
@@ -29,109 +28,81 @@ Hlavna aplikacna vrstva je v subore `app.py`, treningovy proces je implementovan
 - scikit-learn
 - TensorBoard
 - yfinance
-- requests
-- SQLAlchemy
-- SQLite
-- TensorFlow
 
-## Struktura projektu
+## Štruktúra projektu
 
-- `app.py` - webove rozhranie, konfiguracia treningu, zobrazenie metrik a grafov
-- `training_4_0.py` - hlavny treningovy pipeline
-- `helper_functions/` - nacitanie dat, definicia modelov, predikcia, ukladanie vystupov, TensorBoard setup
-- `database_scripts/` - skripty pre nacitanie a aktualizaciu dat do SQLite
-- `api/api_functions.py` - sprava Alpha Vantage API klucov
-- `models/` - ulozene modely (checkpointy)
-- `runs/` - TensorBoard logy pre trening a predikciu
-- `assets/style.css` - stylovanie Dash aplikacie
+- `app.py` — webové rozhranie, konfigurácia tréningu, zobrazenie metrík a grafov
+- `training_4_0.py` — hlavný tréningový pipeline
+- `helper_functions/` — načítanie dát, definícia modelov, predikcia, ukladanie výstupov, TensorBoard setup
+- `assets/style.css` — štýlovanie Dash aplikácie
 
-## Instalacia a spustenie
+## Inštalácia a spustenie
 
-### Poziadavky
+### Požiadavky
 
-- Python 3.11 alebo novsi
+- Python 3.11 alebo novší
 - pip
 
-### Klon repozitara a vytvorenie virtualneho prostredia
+### Klon repozitára a vytvorenie virtuálneho prostredia
 
 ```bash
-git clone https://github.com/dragox134/stocks_data_prediction.git
-cd stocks_data_prediction
+git clone https://github.com/SPSE-Zoska-IV-C/Gurtner_Predikcia_cien_akcii_na_zaklade_historickych_dat.git
+cd Gurtner_Predikcia_cien_akcii_na_zaklade_historickych_dat
 python -m venv stock_prediction
 ```
 
 Windows PowerShell:
-
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 .\stock_prediction\Scripts\Activate.ps1
 ```
 
 Linux/macOS:
-
 ```bash
 source stock_prediction/bin/activate
 ```
 
-### Instalacia zavislosti
+### Inštalácia závislostí
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Spustenie aplikacie
+### Spustenie aplikácie
 
 ```bash
 python app.py
 ```
 
-Po spusteni je aplikacia dostupna na adrese:
-- `http://127.0.0.1:8050`
+Po spustení je aplikácia dostupná na adrese `http://127.0.0.1:8050`.
 
-### Volitelne: aktualizacia lokalnych databaz
+## Základný postup použitia
 
-Pre pracu s lokalnymi SQLite databazami su pripravene skripty:
-- `database_scripts/start.py`
-- `database_scripts/load_and_update.py`
-- `api/api_functions.py`
-
-Pred pouzitim je potrebne pripravit databazu API klucov (`dbs/api/api_keys.db`) s tabulkou `api_keys`.
-
-Spustenie:
-
-```bash
-python database_scripts/start.py
-```
-
-Poznamka: Trening modelov v aktualnej verzii nacitava historicke data primarne cez kniznicu `yfinance`.
-
-## Zakladny postup pouzitia
-
-1. V aplikacii vyber ticker, model a treningove parametre.
-2. Spusti trening tlacidlom `Train Model`.
-3. Sleduj vystupy:
-- `Loss/Train`
-- `Loss/Val`
-- `Train/Close`
-- `Test/Close` (vratane buducej predikcie)
+1. V aplikácii vyberte model a tréningové parametre.
+2. Spustite tréning tlačidlom `Train Model`.
+3. Sleduj výstupy:
+   - `Loss/Train`
+   - `Loss/Val`
+   - `Train/Close`
+   - `Test/Close` (vrátane budúcej predikcie)
 
 ## Credits
 
-- Autor projektu: Leo Gürtner
-- Typ projektu: skolsky maturitny projekt
-- Pouzite kniznice a frameworky: PyTorch, Dash, Plotly, scikit-learn, yfinance, SQLAlchemy, TensorBoard
-- Data zdroje: Yahoo Finance (cez `yfinance`), Alpha Vantage (pre databazove skripty)
+- **Autor projektu:** Leo Gürtner
+- **Typ projektu:** školský maturitný projekt
+- **Použité knižnice a frameworky:** PyTorch, Dash, Plotly, scikit-learn, yfinance, TensorBoard
+- **Zdroje dát:** Yahoo Finance (cez `yfinance`)
 
 ## Prispievanie
 
-Projekt je primarne urceny ako skolsky projekt. Pripadne navrhy na zlepsenie su vitane.
+Projekt je primárne určený ako školský projekt. Prípadné návrhy na zlepšenie sú vítané.
 
-Odporucany postup:
-1. Fork repozitara
-2. Vytvorenie vlastneho branchu
+Odporúčaný postup:
+1. Fork repozitára
+2. Vytvorenie vlastného branchu
 3. Vytvorenie Pull Requestu s popisom zmien
 
 ## Licencia
 
-Tento projekt je licencovany pod MIT licenciou.
-Podrobnosti su uvedene v subore `LICENSE`.
+Tento projekt je licencovaný pod MIT licenciou.
+Podrobnosti sú uvedené v súbore `LICENSE`.
