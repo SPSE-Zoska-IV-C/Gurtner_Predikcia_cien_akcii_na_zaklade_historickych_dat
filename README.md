@@ -1,4 +1,4 @@
-# Stock Price Prediction Dashboard
+# Predikcia cien akcií na základe historických dát
 
 Maturitný projekt zameraný na predikciu cien akcií pomocou modelov strojového učenia.
 
@@ -35,6 +35,15 @@ Aktuálne implementované modely:
 - `training_4_0.py` — hlavný tréningový pipeline
 - `helper_functions/` — načítanie dát, definícia modelov, predikcia, ukladanie výstupov, TensorBoard setup
 - `assets/style.css` — štýlovanie Dash aplikácie
+- `archived` — niekoľko hlavných uložených spustení
+- `logs_pytorch` — všetky uložené spustenia
+- `models` — všetky uložené najlepšie modely
+
+> **Poznámka:** Súčasťou repozitára sú aj staršie skripty pre prácu s lokálnymi
+> SQLite databázami a Alpha Vantage API (`database_scripts/`, `dbs/`, `api/`).
+> Tieto komponenty vznikli ako prototyp v ranej fáze vývoja a nie sú súčasťou
+> hlavnej funkcionality aplikácie — slúžia výlučne ako ukážka počiatočného smeru projektu.
+> Aplikácia v aktuálnej verzii načítava dáta výhradne cez knižnicu `yfinance`.
 
 ## Inštalácia a spustenie
 
@@ -80,7 +89,7 @@ Po spustení je aplikácia dostupná na adrese `http://127.0.0.1:8050`.
 
 1. V aplikácii vyberte model a tréningové parametre.
 2. Spustite tréning tlačidlom `Train Model`.
-3. Sleduj výstupy:
+3. Sledujte výstupy:
    - `Loss/Train`
    - `Loss/Val`
    - `Train/Close`
@@ -89,8 +98,7 @@ Po spustení je aplikácia dostupná na adrese `http://127.0.0.1:8050`.
 ## Credits
 
 - **Autor projektu:** Leo Gürtner
-- **Typ projektu:** školský maturitný projekt
-- **Použité knižnice a frameworky:** PyTorch, Dash, Plotly, scikit-learn, yfinance, TensorBoard
+- **Vedúci práce:** Ing. Oliver Halaš
 - **Zdroje dát:** Yahoo Finance (cez `yfinance`)
 
 ## Prispievanie
